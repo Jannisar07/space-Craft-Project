@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS link below -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+
+
+        }
+        .banner{
+            width: 100%;
+            /* height: 800px; */
+        }
+        .banner img{
+            height: inherit;
+            width: 100%;
+            position: relative;
+
+        }
+        .header{
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            left: 80px;
+
+            border: 3px solid yellow;
+        }
+        .search{
+           color: white;
+          
+        }
+        .space{
+            font-size: 25px;
+            color: white;
+            letter-spacing: 7px;
+        }
+        .data{
+            width: 100%;
+            position: absolute;
+            top: 165px;
+        
+
+        
+            color: white;
+            text-align: center;
+
+        }
+        .data p{
+            letter-spacing: 15px;
+        }
+        .data h1{
+            font-size: 90px;
+        }
+        section{
+            height: vh;
+            width: 100%;
+            background-color: rgb(4, 1, 18);
+        }
+        .container{
+            width: 80%;
+            margin: 0% auto;
+            padding-top: 30px;
+        
+        }
+        .top{
+            width: 100%;
+            border: 1px solid yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 25px;
+        }
+        .box{
+            width: 19%;
+            border-right: 1px solid yellow;
+        }
+        .box:nth-child(5){
+            border-right: 0;
+        }
+        .box h2{
+            letter-spacing: 5px;
+        }
+        .box p{
+            font-size: 10px;
+        }
+        .advantures{
+            margin-top: 150px;
+            width: 100%;
+            text-align: center;
+        }
+        .advantures p {
+            color: yellow;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+        .advantures h2{
+            color: white;
+            font-size: 35px;
+        }
+        .MoonMain{
+            margin-top: 180px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .Card{
+            width: 30%;
+            position: relative;
+        }
+        .Card img{
+            width: 100%;
+            height: inherit;
+        }
+        .Planet{
+            position: absolute;
+            margin-top: -25%;
+        }
+        .Planet img{
+            width: 100%;
+            height: inherit;
+        }
+        .text{
+            position: absolute;
+            top: 80px;
+            left: 0px;
+            right: 0px;
+            margin: 0% auto;
+            color: white;
+            width: fit-content;
+            text-align: center;
+        }
+        .text p{
+            letter-spacing: 5px;
+        }
+        .text h3{
+            font-size: 35px;
+        }
+        .btn{
+            padding: 8px 20px;
+            background-color: yellow;
+            width: fit-content;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0% auto;
+        }
+    
+        
+        .bioSuit{
+            width: 100%;
+            display: flex;
+           
+            margin-top: 300px;
+        }
+        .left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+       
+      
+        .upper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid yellow;
+            padding-bottom: 20px;
+            
+        }
+        .lbio p{
+            color: yellow;
+            font-size: 12px;
+            letter-spacing: 5px;
+
+        }
+        .lbio h2{
+            color: white;
+            font-size: 30px;
+        }
+        .Rbio{
+        
+            color: yellow;
+        }
+        .Rbio p{
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+        .para{
+            color: white;
+            margin-top: 20px;
+        
+            margin-bottom: 20px;
+
+
+        }
+        .lightermain{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .lighter{
+            display: flex;
+            width: 100%;
+        }
+        .fifty{
+            width: 33.33%;
+            padding: 30px;
+            color: white;
+            border: 1px solid yellow;
+
+
+        }
+        .fifty p{
+            font-size: 12px;
+            letter-spacing: 5px;
+            padding-top: 5px;
+        }
+        
+        .learn{
+            display: flex;
+            justify-content: flex-end;
+            color: white;
+            width: 100%;
+            text-align: center;
+
+            
+        }
+        .Lbox{
+            border: 1px solid yellow;
+            padding: 10px;
+
+        
+            
+        }
+        .Lbox:nth-child(1){
+            width: 50%;
+        }
+        .Lbox:nth-child(2){
+            width: 15%;
+        }
+        .right{
+            width: 50%;
+
+        }
+        .right img{
+            height: inherit;
+            width: 100%;
+        }
+        .Labels{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 1px solid yellow;
+            padding: 15px;
+            margin-top: 80px;
+        }
+        .label{
+            color: white;
+            letter-spacing: 5px;
+        }
+        .main2{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            width: 100%;
+        }
+        .left2{
+            width: 48%;
+            position: relative;
+
+        }
+        .left2 img{
+            height: inherit;
+            width: 100%;
+        }
+        .right2{
+            width: 48%;
+            position: relative;
+        }
+        .Gravity{
+            display: flex;
+            margin-top: 60px;
+        }
+        .bookTrip{
+            display: flex;
+            width: 100%;
+        }   
+        .book{
+            border: 1px solid yellow;
+            color: white;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .book:nth-child(1){
+            width: 66%;
+        }
+        .book:nth-child(2){
+            width: 50px;
+
+        }
+        .book:nth-child(3){
+            width: 50px;
+
+        }
+        .olympus{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+           
+            
+
+         
+
+         
+        }
+        .olympus img{
+            width: 100%;
+            height: inherit;
+            border-radius: 100%;
+
+        }
+         .border{
+            height: 250px;
+            width:250px;
+            border: 2px dotted white;
+            border-radius: 100%;
+            position: absolute;
+            bottom: -25px;
+            right: -5px;
+        }
+        .data2{
+                position: absolute;
+                left: -30px;
+                bottom: 80px;
+                letter-spacing: 5px;
+
+        }
+        .data2 h3{
+            color: yellow;
+            font-size: 15px;
+        }
+        .data2 P{
+            color: white;
+            font-size: 12px;
+
+        }
+        .mark{
+            margin-top: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .markBox{
+            width: 32%;
+            height: 450px;
+
+
+        }
+        .markBox img{
+            width: 100%;
+            height: inherit;
+        }
+        .markBox2{
+            display: flex;
+            flex-direction: column;
+            width: 32%;
+        }
+        .markUpper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 25px;
+            border-bottom: 1px solid yellow;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            
+            
+        }
+        .watney p{
+            color: yellow;
+            font-size: 12px;
+        }
+        .arrow{
+            border: 1px solid yellow;
+            padding: 8px 20px;
+        }
+        .markBox2 p{
+            color: white;
+            
+        }
+        .imagesMain{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+       .images3{
+        width: 30%;
+        height: 250px;
+
+       }
+       .images3 img{
+        width: 100%;
+        height: inherit;
+       }
+       .Images3{
+        width: 40%;
+        height: 250px;
+
+       }
+       .Images3 img{
+        width: 100%;
+        height: inherit;
+       }
+       .FirstTimeMain{
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        text-align: center;
+        margin-top: 70px;
+
+       }
+       .first1{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      
+        color: white;
+        
+       }
+       .first1 p{
+        font-size: 13px;
+       }
+       .logo{
+        width: 30%;
+       }
+       .logo img{
+        width: 100%;
+        height: inherit;
+       }
+       .videoMain{
+     
+
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 90px;
+       }
+       .Lvideo{
+        width: 48%;
+        height: 300px;
+        
+
+       }
+       .Lvideo iframe{
+        width: 100%;
+        height: inherit;
+       }
+       .Rform{
+        width: 48%;
+        color: yellow;
+        padding: 25px;
+
+
+       }
+       .Rform h3{
+        color: white;
+        font-size: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+       }
+       .Rform p {
+        padding: 5px;
+        border: 2px outset yellow;
+        width: 50%;
+        border-radius: 5px;
+   
+
+       }
+       .Rform :nth-child(4){
+        width: fit-content;
+        padding: 7px;
+       }
+       .footer{
+        margin-top: 80px;
+        width: 100%;
+        background-image: url(dark_moon_nobackground.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        height: 400px;
+        position: relative;
+       }
+       .Datas{
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        right: 0px;
+        margin: 0% auto;
+        color: white;
+        width: fit-content;
+        font-size: 35px;
+
+       }
+     .Texts{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        position: absolute;
+        bottom: 50px;
+        left: 0px;
+        right: 0px;
+        margin: 0% auto;
+     }
+     .Cardimage {
+    height: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="Banner_img.jpg" alt="">
+        <div class="header" data-aos="zoom-in" data-aos-easing="linear"
+        data-aos-duration="1000">
+            <div class="search"> <i class="fa-solid fa-magnifying-glass"></i> </div>
+            <div class="search"> Destination</div>
+            <div class="search">Bookings</div>
+            <div class="space"> <strong>Spaced</strong></div>
+            <div class="search">Technology</div>
+            <div class="search">My Trips</div>
+            <div class="search">Mars Conditions</div>
+
+        </div> <!-- header div ends here -->
+
+        <div class="data" data-aos="zoom-in" data-aos-easing="linear"
+        data-aos-duration="1000">
+            <p> THE SAFEST WAY TO </p>
+            <h1>EXPORE THE GALAXY</h1>
+        </div><!-- data div ends here -->
+    </div><!-- banner div ends here -->
+
+    <section>
+        <div class="container">
+            <div class="top" data-aos="fade-right" data-aos-easing="linear"
+            data-aos-duration="1000" >
+                <div class="box"><p>LAUNCH PRO</p> <h2>SEA</h2></div>
+                <div class="box"><p>DESTINATION</p> <h2>MOON</h2></div>
+                <div class="box"><p>DATES</p> <h2>7.20-7.25</h2></div>
+                <div class="box"><p>PASSENGER</p> <h2>1 ADULT</h2></div>
+                <div class="box">   <h2>SEARCH</h2></div>
+
+            </div> <!-- top div ends here -->
+
+            <div class="advantures"data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"> <p>FEATURED</p> <H2>ADVENTURES</H2></div>  <!-- adventure div ends here -->
+
+            <div class="MoonMain"> 
+
+                <div class="Card">
+                    <div class="Planet" data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="2000"><img src="Moon_planet.png" alt=""></div>
+                    <div class="Cardimage"><img src="package-1.jpg" alt=""></div><!-- cardImage div ends here -->
+                     <!-- planet div ends here -->
+                    <div class="btn" data-aos="zoom-in"> <p> FROM $199 </p> </div> <!-- btn div ends here -->
+                    <div class="text"  data-aos="zoom-out"  data-aos-easing="linear"
+                    data-aos-duration="2500">
+                        <p>MOON</p> <h3>DUNE BUGGY</h3> <H3>TOURS</H3>
+                    </div> <!-- text div ends here -->
+                </div><!-- Card div ends here -->
+                <div class="Card">
+                    <div class="Planet" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="2000"><img src="Mars_planet.png" alt=""></div> <!-- planet div ends here -->
+                    <div class="Cardimage"></div><!-- cardImage div ends here -->
+                    <div class="btn" data-aos="zoom-in"> <p> FROM $199 </p> </div> <!-- btn div ends here -->
+                    <div class="text"  data-aos="zoom-out"  data-aos-easing="linear"
+                    data-aos-duration="2500">
+                        <p>MOON</p> <h3>DUNE BUGGY</h3> <H3>TOURS</H3>
+                    </div> <!-- text div ends here -->
+                </div><!-- Card div ends here -->
+                <div class="Card">
+                    <div class="Planet" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="2000"><img src="Neptune_planet.png" alt=""></div> <!-- planet div ends here -->
+                    <div class="Cardimage"><img src="Astraunutsuit.jpg" alt=""></div><!-- cardImage div ends here -->
+                    <div class="btn" data-aos="zoom-in"> <p> FROM $199 </p> </div> <!-- btn div ends here -->
+                    <div class="text"  data-aos="zoom-out"  data-aos-easing="linear"
+                    data-aos-duration="2500">
+                        <p>MOON</p> <h3>DUNE BUGGY</h3> <H3>TOURS</H3>
+                    </div> <!-- text div ends here -->
+                </div><!-- Card div ends here -->
+        
+            </div><!-- moonMain div ends here -->
+
+            <div class="bioSuit">
+
+                <div class="left" data-aos="zoom-out-left" data-aos-easing="linear"
+                data-aos-duration="1000">
+                    <div class="upper">
+                        <div class="lbio"><p>ENHANCED LUXURY</p><h2>BIO SUIT 2.0</h2></div><!-- lbio div ends here -->
+                        <div class="Rbio"><p>$100 UPGRADE</p></div><!-- Rbio div ends here -->
+                    </div><!-- upper div ends here -->
+                    <div class="para"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam iste eum. Saepe culpa iusto quia fuga cupiditate quaerat sequi? Dolorum voluptates tenetur quidem natus!</p></div>
+                    <div class="lightermain">
+                    <div class="lighter"> 
+                      <div class="fifty"> <h2>38%</h2> <p>GRAVITY</p> </div> <!-- 50 div ends here -->
+                      <div class="fifty"> <h2>24 HR</h2> <p>IN A DAY</p> </div> <!-- 50 div ends here -->
+                      <div class="fifty"> <h2> -60F</h2> <p>AVG TEMP</p> </div> <!-- 50 div ends here -->
+
+
+                    </div><!-- lighter div ends here -->
+
+                    <div class="learn"> 
+                    
+                        <div class="Lbox"> <p>LEARN MORE</p></div> <!-- lbox div ends here -->
+                        <div class="Lbox"> <P> > </P></div> <!-- lbox div ends here -->
+
+                    </div><!-- learn div ends here -->
+                </div> <!-- lightermain div ends here -->
+                </div><!-- left div ends here -->
+                <div class="right" data-aos="zoom-out-right" data-aos-easing="linear"
+                data-aos-duration="1500">
+                    <img src="Spacesuit1.png" alt="">
+                </div><!-- right div ends here -->
+
+            </div> <!-- bio suit div ends here -->
+
+            <div class="advantures"> <p>DISCOVER</p> <H2>OTHER WORLDS</H2></div>  <!-- adventure div ends here -->
+
+            <div class="Labels">
+
+                <div class="label">MOON</div><!-- label div ends here -->
+                <div class="label">MARS</div><!-- label div ends here -->
+                <div class="label">EUROPA</div><!-- label div ends here -->
+                <div class="label">TITAN</div><!-- label div ends here -->
+                <div class="label">SATURN</div><!-- label div ends here -->
+                <div class="label">NEPTUNE</div><!-- label div ends here -->
+
+
+            </div> <!-- labels div ends here -->
+
+            <div class="main2">
+                <div class="left2"> 
+                    <img src="mars-trip.png" alt="">
+                    <div class="olympus"> 
+                        <img src="mount_olympus.jpg" alt="">
+                    </div><!-- olympus div ends here -->
+
+                    <div class="border"> </div>
+                    
+                </div> <!-- left2 div ends here -->
+                <div class="right2">
+                    <div class="data2"> <h3>MT.OLYMPUS</h3> <P>78000 FT</P></div> <!-- data2 div ends here -->
+                    <div class="upper">
+                        <div class="lbio"><h2>THE RED PLANET</h2></div><!-- lbio div ends here -->
+                        <div class="Rbio"><p>3 DAY TRIP</p></div><!-- Rbio div ends here -->
+                    </div><!-- upper div ends here -->
+                    <div class="para"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam iste eum. Saepe culpa iusto quia fuga cupiditate quaerat sequi? Dolorum voluptates tenetur quidem natus!</p></div>
+
+                    <div class="Gravity"> 
+                      <div class="fifty"> <h2>50%</h2> <p>LIGHTER</p> </div> <!-- 50 div ends here -->
+                      <div class="fifty"> <h2>HUD</h2> <p>CONTROLS</p> </div> <!-- 50 div ends here -->
+                      <div class="fifty"> <h2>8 HRS</h2> <p>OXYGEN</p> </div> <!-- 50 div ends here -->
+
+
+                    </div><!-- lighter div ends here -->
+
+                   <div class="bookTrip">
+                    <div class="book"> <p>  BOOK A TRIP</p></div><!-- book div ends here -->
+                    <div class="book"> <P> &lt; </P></div><!-- book div ends here -->
+                    <div class="book"> <p>&gt;</p></div><!-- book div ends here -->
+
+                   </div><!-- left div ends here -->
+                </div><!-- left div ends here -->
+                </div><!-- right2 div ends here -->
+
+               
+            
+            </div><!-- main2 div ends here -->
+
+        
+
+        </div> <!-- conatiner div ends here -->
+        <div class="mark">
+            <div class="markBox"><img src="spaced-gallery_photo-1.jpg" alt=""></div> <!-- mark div ends here -->
+            <div class="markBox2">
+                <div class="markUpper">
+                    <div class="watney"><p>TESTIMONIALS</p> <H3>MARK WATNEY</H3></div>
+                    <div class="arrow">  &lt; &gt; </div>
+                </div> <!-- markupper div ends here -->
+                <div class="div">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium veritatis commodi recusandae cum eos corporis a natus, nisi qui necessitatibus nobis aspernatur, sint explicabo placeat asperiores et maxime blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quaerat! Eos laborum molestiae aperiam vero odit vitae temporibus aspernatur dolor.</p> </div>
+            </div> <!-- markBox2     div ends here -->
+            <div class="markBox"> <img src="spaced-gallery_photo-2.jpg" alt=""></div> <!-- mark div ends here -->
+
+        </div><!-- mark div ends here -->
+
+        <div class="imagesMain">
+            <div class="images3"> <img src="spaced-gallery_photo-3.jpg" alt=""></div><!-- images 3 div ends here -->
+            <div class="Images3"><img src="spaced-gallery_photo-4.jpg" alt=""></div><!-- images 3 div ends here -->
+            <div class="images3"><img src="spaced-gallery_photo-5.jpg" alt=""></div><!-- images 3 div ends here -->
+
+        </div> <!-- imagesMain div ends here -->
+
+        <div class="container">
+            <div class="advantures"> <p>GETTING STARED</p> <H2>PLAN YOUR TRIP</H2></div>  <!-- adventure div ends here -->
+
+            <div class="FirstTimeMain">
+                <div class="first1">
+                    <div class="logo"><img src="first_time_icon.png" alt=""></div>
+                    <div class="div"><h4>FIRST TIME?</h4></div>
+                    <div class="div"><P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio enim ipsam soluta nihil tempora quasi!</P></div>
+                </div><!-- first1 div ends here -->
+
+                <div class="first1">
+                    <div class="logo"><img src="spaceship_icon.png" alt=""></div>
+                    <div class="div"><h4>FIRST TIME?</h4></div>
+                    <div class="div"><P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio enim ipsam soluta nihil tempora quasi!</P></div>
+                </div><!-- first1 div ends here -->
+
+                <div class="first1">
+                    <div class="logo"><img src="room_icon.png" alt=""></div>
+                    <div class="div"><h4>FIRST TIME?</h4></div>
+                    <div class="div"><P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio enim ipsam soluta nihil tempora quasi!</P></div>
+                </div><!-- first1 div ends here -->
+
+                <div class="first1">
+                    <div class="logo"><img src="activities_icon.png" alt=""></div>
+                    <div class="div"><h4>FIRST TIME?</h4></div>
+                    <div class="div"><P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio enim ipsam soluta nihil tempora quasi!</P></div>
+                </div><!-- first1 div ends here -->
+            </div> <!-- FirstTimeMain div ends here -->
+
+
+            <div class="videoMain">
+                <div class="Lvideo">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hz2F_S3Tl0Y?si=L3vPX5-cDHzM_cQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div><!-- Lvideo div ends here -->
+                <div class="Rform"><h3>SIGN UP FOR OUR UPDATES</h3>
+                    
+                    <p> name@gmai.com</p>
+                    <h3>LETS INHALE</h3>
+                    <p>SPACED UP!</p>
+
+
+                </div><!-- Rform div ends here -->
+            </div> <!-- VideoMain div ends here -->
+
+            <div class="footer">
+                <div class="Datas">
+                 <strong>  SPACED</strong>
+                </div><!-- Datas div ends here -->
+                
+             <div class="Texts">
+                <div class="search"> DESTINATIONS</div>
+                <div class="search">BOOKINGS</div>
+                <div class="search">TECHNOLOGY</div>
+                <div class="search">MU TRIPS</div>
+                <div class="search">MARS CONDITIONS</div>
+    
+             </div> <!-- texts div ends here -->
+              
+             
+            </div><!-- footer div ends here -->
+        </div> <!-- conatiner div ends here -->
+
+        
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
